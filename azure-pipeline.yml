@@ -1,0 +1,11 @@
+ stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      name: Default
+      demands:
+      - agent.name -equals TestselfhostedPool
+    continueOnError: true
+    steps:
+    - script: echo "hello to my first Build"
