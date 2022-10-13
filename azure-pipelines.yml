@@ -17,9 +17,9 @@ steps:
 - task: AzureCLI@2
   displayName: Azure CLI
   inputs:
-    azureSubscription: SCFromPortalTODevops
+    azureSubscription: Public ACR Service Connection
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
-      az login
-      az keyvault secret show --name "SPUserName" --vault-name "KeyVaultPvtSubnet" --query "value" -o tsv
+      az acr login --name PublicContainerRegistry.azurecr.io
+      
