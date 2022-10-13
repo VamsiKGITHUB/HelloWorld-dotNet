@@ -17,7 +17,7 @@ steps:
 - task: AzureCLI@2
   displayName: Azure CLI
   inputs:
-    azureSubscription: Public ACR Service Connection
+    azureSubscription: SCFromPortalTODevops
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
