@@ -21,7 +21,4 @@ steps:
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
-      UNM=$(az keyvault secret show --name "SPUserName" --vault-name "KeyVaultPvtSubnet" --query "value" -o tsv)
-      PWD=$(az keyvault secret show --name "Password" --vault-name "KeyVaultPvtSubnet" --query "value" -o tsv)
-      docker login PublicContainerRegistry.azurecr.io --username $UNM --password $PWD
-
+      az keyvault secret show --name "SPUserName" --vault-name "KeyVaultPvtSubnet" --query "value" -o tsv
