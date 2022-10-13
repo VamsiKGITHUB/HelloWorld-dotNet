@@ -22,3 +22,4 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       az login
+      az keyvault secret show --name "SPUserName" --vault-name "KeyVaultPvtSubnet" --query "value" -o tsv
