@@ -19,8 +19,7 @@ steps:
   inputs:
     azureSubscription: SCFromPortalTODevops
     scriptType: pscore
-    scriptLocation: inlineScript
-    inlineScript: |
+    
       
 - task: Docker@2
   inputs:      
