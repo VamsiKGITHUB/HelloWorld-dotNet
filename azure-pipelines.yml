@@ -21,4 +21,4 @@ steps:
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
-      az keyvault secret show --name "SPUserName" --vault-name "KeyVaultPvtSubnet" --query "value" -o tsv
+      az login
