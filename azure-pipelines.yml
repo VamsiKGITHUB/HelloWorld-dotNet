@@ -1,5 +1,6 @@
 # Starter pipeline
 
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -23,10 +24,17 @@ steps:
     inlineScript: |
      echo "Memory information"
     
-      
+ 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerHubServiceConnection'
+    command: 'login'
+
 - task: Docker@2
   inputs:      
       containerRegistry: 'Public ACR Service Connection'
       command: 'buildAndPush'
-      Dockerfile: 'Dockerfile'
+      repository: PublicContainerRegistry.azurecr.io
+      tags: |
+           tag1
       
