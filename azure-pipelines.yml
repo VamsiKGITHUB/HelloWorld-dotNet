@@ -28,5 +28,5 @@ steps:
   inputs:      
       containerRegistry: 'Public ACR Service Connection'
       command: 'buildAndPush'
-      Dockerfile: '*/Dockerfile'
+      Dockerfile: '**/Dockerfile'
       
