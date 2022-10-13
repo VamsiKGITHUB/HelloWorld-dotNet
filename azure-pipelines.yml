@@ -21,5 +21,5 @@ steps:
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
-      az --version
+      az acr login PublicContainerRegistry
 
