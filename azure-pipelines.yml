@@ -19,6 +19,9 @@ steps:
   inputs:
     azureSubscription: SCFromPortalTODevops
     scriptType: pscore
+    scriptLocation: inlineScript
+    inlineScript: |
+     echo "Memory information"
     
       
 - task: Docker@2
