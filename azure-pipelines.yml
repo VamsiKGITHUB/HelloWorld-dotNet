@@ -18,7 +18,7 @@ steps:
   displayName: Azure CLI
   inputs:
     azureSubscription: 'SCFromPortalTODevops'
-    scriptType: ps
+    scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
       az --version
