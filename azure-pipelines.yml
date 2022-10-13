@@ -15,8 +15,11 @@ steps:
   displayName: 'Run a one-line script'
 
 - task: AzureCLI@2
+  displayName: Azure CLI
   inputs:
     azureSubscription: 'SCFromPortalTODevops'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az acr login --name PublicContainerRegistry'
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
 
