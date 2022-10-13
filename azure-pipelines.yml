@@ -22,4 +22,9 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       az acr login --name PublicContainerRegistry.azurecr.io
+- task: Docker@2
+  inputs:
+      containerRegistry: 'Public ACR Service Connection'
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
       
