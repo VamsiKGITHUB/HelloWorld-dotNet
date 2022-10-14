@@ -34,7 +34,7 @@ steps:
   inputs:      
       containerRegistry: 'Public ACR Service Connection'
       command: 'Push'
-      repository: nginx
+      repository: debian
       tags: |
            latest
       
