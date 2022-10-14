@@ -22,7 +22,7 @@ steps:
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
-     echo "Memory information"
+     echo "login to Azure"
     
  
 - task: Docker@2
