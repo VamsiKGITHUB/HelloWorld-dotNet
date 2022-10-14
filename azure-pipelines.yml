@@ -32,7 +32,7 @@ steps:
 
 - task: Docker@2
   inputs:      
-      containerRegistry: 'SCFromPortalTODevops'
+      containerRegistry: 'Public ACR Service Connection'
       command: 'Push'
       repository: debian
       tags: |
