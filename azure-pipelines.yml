@@ -25,14 +25,14 @@ steps:
      echo "login to Azure"
     
  
-- task: Docker@2
-  inputs:
-    containerRegistry: 'DockerHubServiceConnection'
-    command: 'login'
+# - task: Docker@2
+#   inputs:
+#     containerRegistry: 'DockerHubServiceConnection'
+#     command: 'login'
 
 - task: Docker@2
   inputs:      
-      containerRegistry: 'Public ACR Service Connection'
+      containerRegistry: 'SCFromPortalTODevops'
       command: 'Push'
       repository: debian
       tags: |
